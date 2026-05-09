@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ink: #162033;
+    --paper: #f8f4ea;
+    --brand: #c9222b;
+    --brand-dark: #8f1720;
+    --gold: #d7a84c;
+    --forest: #1f6b55;
+  }
+
+  * {
+    scroll-behavior: smooth;
+    letter-spacing: 0;
+  }
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+  }
+
+  #root {
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fraunces', serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-red-700 px-6 py-3 font-bold text-white shadow-lg shadow-red-950/20 transition duration-300 hover:-translate-y-0.5 hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-700 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-slate-300 bg-white px-6 py-3 font-bold text-slate-900 transition duration-300 hover:-translate-y-0.5 hover:border-red-700 hover:text-red-700 focus:outline-none focus:ring-2 focus:ring-red-700 focus:ring-offset-2;
+  }
+
+  .section-kicker {
+    @apply mb-3 inline-flex items-center rounded-full border border-red-200 bg-red-50 px-3 py-1 text-xs font-extrabold uppercase text-red-700;
+  }
+
+  .section-title {
+    @apply text-3xl font-black leading-tight text-slate-950 md:text-4xl lg:text-5xl;
+  }
+
+  .card-hover {
+    @apply transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/10;
+  }
+
+  .glass-panel {
+    @apply border border-white/15 bg-white/10 shadow-2xl shadow-slate-950/20 backdrop-blur-md;
+  }
+
+  .image-sheen {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+
+  .image-sheen::after {
+    background: linear-gradient(110deg, transparent 20%, rgba(255,255,255,0.18) 45%, transparent 70%);
+    content: '';
+    inset: 0;
+    position: absolute;
+    transform: translateX(-120%);
+    transition: transform 700ms ease;
+    z-index: 1;
+  }
+
+  .image-sheen:hover::after {
+    transform: translateX(120%);
+  }
+}
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #f8f4ea; }
+::-webkit-scrollbar-thumb { background: #c9222b; border-radius: 999px; border: 2px solid #f8f4ea; }
+
+.skip-link {
+  @apply absolute -top-10 left-0 z-50 bg-red-700 px-4 py-2 text-white transition-all duration-300;
+}
+.skip-link:focus { @apply top-0; }

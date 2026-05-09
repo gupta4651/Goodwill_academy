@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ink: #0b1324;
+    --panel: #f3f7f9;
+    --blueprint: #12375d;
+    --cyan: #00a6c8;
+    --copper: #c47a2c;
+  }
+
+  * {
+    scroll-behavior: smooth;
+    letter-spacing: 0;
+  }
+
+  body {
+    background: var(--panel);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+  }
+
+  #root {
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Archivo Black', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-cyan-600 px-6 py-3 font-bold text-white shadow-lg shadow-cyan-950/20 transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-slate-300 bg-white px-6 py-3 font-bold text-slate-950 transition duration-300 hover:-translate-y-0.5 hover:border-cyan-700 hover:text-cyan-800 focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:ring-offset-2;
+  }
+
+  .section-kicker {
+    @apply mb-3 inline-flex items-center rounded-full border border-cyan-200 bg-cyan-50 px-3 py-1 text-xs font-extrabold uppercase text-cyan-800;
+  }
+
+  .section-title {
+    @apply text-3xl font-black leading-tight text-slate-950 md:text-4xl lg:text-5xl;
+  }
+
+  .tech-card {
+    @apply rounded-lg border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/10;
+  }
+}
+
+.skip-link {
+  @apply absolute -top-10 left-0 z-50 bg-cyan-700 px-4 py-2 text-white transition-all duration-300;
+}
+
+.skip-link:focus {
+  @apply top-0;
+}
