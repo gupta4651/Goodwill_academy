@@ -91,8 +91,8 @@ export default function Footer() {
 
         <div className="my-8 rounded-lg border border-cyan-400/20 bg-cyan-500/10 p-5 text-center">
           <p className="text-slate-300">Also explore our Foundation + XI/XII Science classes</p>
-          <a href="https://goodwillclasses.edu.co.in" className="mt-2 inline-flex font-black text-cyan-200 transition hover:text-white">
-            www.goodwillclasses.edu.co.in | Call: 8793596849
+          <a href="https://goodwill-academy-v118.vercel.app/" target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex font-black text-cyan-200 transition hover:text-white">
+            Visit Sandeep Sir Academy | Call: 8793596849
           </a>
         </div>
 

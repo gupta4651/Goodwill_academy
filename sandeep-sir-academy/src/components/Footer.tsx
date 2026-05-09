@@ -91,8 +91,8 @@ export default function Footer() {
 
         <div className="my-8 rounded-lg border border-red-400/20 bg-red-500/10 p-5 text-center">
           <p className="text-slate-300">Also explore our GATE & Engineering Academy</p>
-          <a href="https://goodwillgate.edu.co.in" className="mt-2 inline-flex font-black text-amber-200 transition hover:text-white">
-            www.goodwillgate.edu.co.in | Call: 8237812411
+          <a href="https://goodwill-academy-4583.vercel.app/" target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex font-black text-amber-200 transition hover:text-white">
+            Visit Goodwill GATE Academy | Call: 8237812411
           </a>
         </div>
 

@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+Disallow: /--store-dir/
+Disallow: /.git/
+Disallow: /node_modules/
+
+Sitemap: https://goodwill-academy-4583.vercel.app/sitemap.xml
+
+# Allow all bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
