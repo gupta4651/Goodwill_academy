@@ -4,6 +4,7 @@ import About from './components/About';
 import Gallery from './components/Gallery';
 import Courses from './components/Courses';
 import Testimonials from './components/Testimonials';
+import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -17,6 +18,7 @@ function App() {
         <Gallery />
         <Courses />
         <Testimonials />
+        <FAQ />
         <Contact />
       </main>
       <Footer />
